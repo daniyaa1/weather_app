@@ -1,4 +1,4 @@
-const apiUrl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
 
 const searchBox=document.querySelector(".search input");
 const searchBtn=document.querySelector(".search button");
@@ -6,8 +6,8 @@ const weatherIcon=document.querySelector(".weather-icon");
 
 
 const checkWeather= async(city)=>{
-    const response=await fetch(`http://localhost:3000/weather?city=${city}`);
-    if(response.status=404){ //if city name is invalid it will give status 404
+    const response=await fetch(`https://weather-app-qrsv.vercel.app/weather?city=${city}`);
+    if(response.status===404){ //if city name is invalid it will give status 404
         document.querySelector(".error").style.display="block";
          document.querySelector(".weather").style.display="none";
     }
