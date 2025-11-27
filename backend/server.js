@@ -56,6 +56,16 @@ app.get('/weather', async (req, res) => {
     }
 });
 
+// Simple status endpoint to check server and API key presence
+app.get('/status', (req, res) => {
+    const apiKeySet = !!API_KEY;
+    res.json({
+        ok: true,
+        apiKeySet,
+        message: apiKeySet ? 'API key present' : 'API key missing on server'
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
