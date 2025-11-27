@@ -16,12 +16,7 @@ It uses the [OpenWeatherMap API](https://openweathermap.org/) to fetch real-time
 
 ## 🌐 Live Demo
 👉 [Check it out here](https://weather-app-cqrn.vercel.app/)  
-
----
-
-## 📸 Preview
-![Weather App Screenshot](images/clear.png)  
-*(Replace with an actual screenshot of your app UI)*  
+ 
 
 ---
 
