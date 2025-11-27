@@ -15,7 +15,7 @@ It uses the [OpenWeatherMap API](https://openweathermap.org/) to fetch real-time
 ---
 
 ## 🌐 Live Demo
-👉 [Check it out here](https://weather-app-tan-theta-81.vercel.app/)  
+👉 [Check it out here](https://weather-app-cqrn.vercel.app/)  
 
 ---
 
