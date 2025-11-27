@@ -54,6 +54,25 @@ Daniya Ishteyaque
 
 ---
 
+## 🧪 Local development (backend proxy)
+
+If you want to run the project locally (recommended), the repository includes a small backend in `backend/` that forwards requests to OpenWeatherMap so your API key is kept server-side.
+
+1. Install and run the backend:
+
+```bash
+cd backend
+npm install
+# create a file named .env in the backend folder with a single line:
+# API_KEY=your_openweather_api_key_here
+npm start
+```
+
+2. Open `index.html` in your browser. The frontend is configured to call `http://localhost:3000/weather?city=...` by default.
+
+If you prefer to use the deployed backend, change the endpoint in `script.js` back to the deployed URL.
+
+
 Now just:  
 
 ```bash
