@@ -72,6 +72,31 @@ npm start
 
 If you prefer to use the deployed backend, change the endpoint in `script.js` back to the deployed URL.
 
+## 🚀 Deployment (Vercel)
+
+When you deploy the app to Vercel, the backend needs an OpenWeatherMap API key available as an environment variable named `API_KEY`.
+
+Steps to configure on Vercel (UI):
+1. Go to your Vercel dashboard and open the project.
+2. Settings → Environment Variables → Add New
+   - Name: `API_KEY`
+   - Value: your OpenWeatherMap API key (no quotes)
+   - Environment: select `Production` (and `Preview` if you want it available for previews)
+3. Save and trigger a redeploy (Deployments → Redeploy latest) or push a new commit.
+
+How to verify the deployment:
+- Call the status endpoint to check whether the API key is set (it will not return the key value):
+
+```bash
+curl -i "https://<your-vercel-domain>/status"
+# example response when missing:
+# {"ok":true,"apiKeySet":false,"message":"API key missing on server"}
+```
+
+Once `apiKeySet` is `true`, the `/weather` endpoint should return real weather data for valid city names.
+
+Security note: never commit your API key. Keep it in Vercel environment variables or in a local `backend/.env` (which is ignored by .gitignore). Use `backend/.env.example` as a template.
+
 
 Now just:  
 
